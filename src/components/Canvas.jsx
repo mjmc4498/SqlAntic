@@ -2,13 +2,13 @@ import React, { useRef, useCallback } from 'react';
 import ReactFlow, {
   Controls,
   Background,
-  useNodesState,
-  useEdgesState,
-  addEdge,
   useReactFlow,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import useStore from '../store/store';
+import CustomNode from './CustomNode';
+
+const nodeTypes = { custom: CustomNode };
 
 const selector = (state) => ({
   nodes: state.nodes,
@@ -67,6 +67,18 @@ const Canvas = () => {
     setSelectedNodeId(null);
   }, [setSelectedNodeId]);
 
+  const defaultEdgeOptions = {
+    animated: false,
+    style: {
+      strokeWidth: 2,
+      stroke: '#007BFF',
+    },
+    markerEnd: {
+      type: 'arrowclosed',
+      color: '#007BFF',
+    },
+  };
+
   return (
     <div className="h-full" ref={reactFlowWrapper} onDragOver={onDragOver} onDrop={onDrop}>
       <ReactFlow
@@ -77,6 +89,8 @@ const Canvas = () => {
         onConnect={onConnect}
         onNodeClick={onNodeClick}
         onPaneClick={onPaneClick}
+        nodeTypes={nodeTypes}
+        defaultEdgeOptions={defaultEdgeOptions}
         fitView
       >
         <Background />
