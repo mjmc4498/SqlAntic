@@ -135,7 +135,11 @@ const useStore = create((set, get) => ({
           }),
       });
       saveStateToLocalStorage(get());
-  }
+  },
+  isModalOpen: false,
+  sqlOutput: '',
+  openModalWithSQL: (sql) => set({ isModalOpen: true, sqlOutput: sql }),
+  closeModal: () => set({ isModalOpen: false, sqlOutput: '' }),
 }));
 
 export default useStore;

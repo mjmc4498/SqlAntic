@@ -3,6 +3,7 @@ import { ReactFlowProvider } from 'reactflow';
 import Sidebar from './components/Sidebar';
 import Canvas from './components/Canvas';
 import PropertiesPanel from './components/PropertiesPanel';
+import SQLModal from './components/SQLModal';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Canvas />
         </div>
         <PropertiesPanel />
+        <SQLModal />
       </ReactFlowProvider>
     </div>
   );
