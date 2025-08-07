@@ -20,10 +20,16 @@ const loadStateFromLocalStorage = () => {
   try {
     const storedState = localStorage.getItem(LOCAL_STORAGE_KEY);
     if (storedState) {
-      return JSON.parse(storedState);
+      const parsedState = JSON.parse(storedState);
+      // Validar que el estado cargado tiene la estructura mínima requerida
+      if (parsedState && parsedState.nodes && parsedState.edges) {
+        return parsedState;
+      }
     }
   } catch (error) {
     console.error("Could not load state from local storage", error);
+    // Opcional: limpiar el localStorage si está corrupto
+    // localStorage.removeItem(LOCAL_STORAGE_KEY);
   }
   return null;
 };
