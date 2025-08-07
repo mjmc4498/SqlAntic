@@ -10,38 +10,51 @@
 - **Autoguardado Local**: Tu trabajo se guarda automáticamente en el `localStorage` de tu navegador. ¡No pierdas ni un cambio!
 - **Interfaz Moderna**: Estilo limpio y minimalista, construido con React, Vite y TailwindCSS.
 
-## 🚀 Cómo Empezar
+## 🚀 Instalación y Ejecución
 
-Sigue estos pasos para levantar el entorno de desarrollo en tu máquina local.
+Sigue estos pasos para poner en marcha el proyecto en tu entorno de desarrollo local.
 
-### Prerrequisitos
+### 1. Prerrequisitos
 
-Asegúrate de tener instalado [Node.js](https://nodejs.org/) (versión 18 o superior) y npm.
+Antes de empezar, asegúrate de tener instalado lo siguiente:
+- **Node.js**: Versión 18 o superior. Puedes descargarlo desde [nodejs.org](https://nodejs.org/).
+- **npm**: Generalmente se instala junto con Node.js.
 
-### Instalación
+### 2. Instalación
 
-1.  **Clona el repositorio:**
-    ```bash
-    git clone https://github.com/tu-usuario/schemaflow.git
-    cd schemaflow
-    ```
+Para instalar el proyecto y sus dependencias, sigue estos comandos en tu terminal:
 
-2.  **Instala las dependencias del proyecto:**
-    ```bash
-    npm install
-    ```
-    Este comando instalará todas las librerías necesarias, como React, ReactFlow, Zustand y TailwindCSS.
+```bash
+# 1. Clona el repositorio a tu máquina local
+git clone https://github.com/tu-usuario/schemaflow.git
 
-### Ejecución
+# 2. Navega al directorio del proyecto
+cd schemaflow
 
-1.  **Inicia el servidor de desarrollo:**
-    ```bash
-    npm run dev
-    ```
-    Este comando levantará la aplicación en modo de desarrollo con Vite.
+# 3. Instala todas las dependencias necesarias
+# Este comando leerá el archivo package.json y descargará todo lo necesario.
+npm install
+```
 
-2.  **Abre la aplicación en tu navegador:**
-    Abre tu navegador y visita [http://localhost:5173](http://localhost:5173) (o el puerto que se indique en la terminal).
+### 3. Ejecución
+
+Una vez que la instalación se haya completado, puedes iniciar la aplicación:
+
+```bash
+# Inicia el servidor de desarrollo con Vite
+npm run dev
+```
+
+Después de ejecutar el comando, la terminal te mostrará un mensaje similar a este:
+
+```
+  VITE v5.x.x  ready in xxx ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+```
+
+Abre tu navegador web y visita la URL que aparece junto a `Local` (normalmente `http://localhost:5173`). ¡Y listo! Ya deberías ver la aplicación funcionando.
 
 ## 🛠️ Uso Básico
 
